@@ -50,4 +50,6 @@ var obj3 ={
 }
 console.log(obj3);
 
+/*Rest e Spread Operator */
+
 
