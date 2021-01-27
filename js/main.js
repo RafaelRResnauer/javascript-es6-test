@@ -22,7 +22,6 @@ var obj1 = {
 obj1.showContext();
 
 /* Default fuction arguments */
-
 //Exemplo de valores padrão
 function randomNumber(){
     return Math.random() * 10;
@@ -33,7 +32,6 @@ function multiply(a,b=randomNumber()){
 console.log(multiply(2))
 
 /*Enhanced object literals */
-
 // exemplo 1
 function method1(){
 
@@ -51,5 +49,33 @@ var obj3 ={
 console.log(obj3);
 
 /*Rest e Spread Operator */
+// Exemplo de Rest Operator
+function sumNew(a, b, ...rest){
+    return a + b + rest.reduce((acc, value) => acc + value, );
+}
+console.log(sumNew(1,2,3,4,5));
 
+//Exemplo de Spread Operator
+const str = 'Teste de ES6';
 
+function logArcs(...args) {
+    console.log(args);
+}
+logArcs(...str)
+
+/*Destructuring*/ 
+// Arrays
+var arr = ['Apple','Orange'];
+var [apple2]=arr;
+console.log(apple2)
+
+// Objetos dentro de objetos
+var obj4 = {
+    name:'Celso',
+    props: {
+        age: 26,
+        favoriteColors: ['black', 'blue']
+    }
+};
+var {props:{age:age2}} = obj4;
+console.log(age2)
